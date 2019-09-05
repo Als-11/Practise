@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Enter Order Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div>
+    <a href="JavaScript:void(0);" (click)="previousOrders()" style="float:right">Previous orders</a>
+  </div>
+  <form [formGroup]="orderForm" (ngSubmit)="submitForm()" style="margin-top:6%">
+    <ion-item>
+      <ion-label position="floating">Product 1</ion-label>
+      <ion-input type="text" formControlName="p1"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Product 2</ion-label>
+      <ion-input type="text" formControlName="p2"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Product 3</ion-label>
+      <ion-input type="text" formControlName="p3"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Product 4</ion-label>
+      <ion-input type="text" formControlName="p4"> </ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit">Submit</ion-button>
+  </form>
+
+
+</ion-content>
+
+
+<!-- <ion-input type="text" [(ngModel)]="encodedData"></ion-input> -->

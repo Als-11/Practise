@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar class="toolClass">
+    <ion-title style="color:white">Previous Orders
+      <button style="float:right;color: white;background-color: black" (click)="dismiss()">
+        <ion-icon name="close" style="font-size:22px"></ion-icon>
+      </button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label><b>Scan here</b></ion-label>
+    <ion-icon style="float: right" name="qr-scanner" (click)="scanCode()"></ion-icon>
+  </ion-item>
+
+  <ion-card *ngFor="let data of orders;let i=index" (click)="cardClicked(data,i)">
+    <ion-item>
+      <ion-label>Order ID</ion-label>
+      <ion-label>{{data.orderId}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Order date</ion-label>
+      <ion-label>{{data.timeStamp}}</ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

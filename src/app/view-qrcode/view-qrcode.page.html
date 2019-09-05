@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar class="toolClass">
+    <ion-title style="color:white">QR Code
+      <button style="float:right;color: white;background-color: black" (click)="dismiss()">
+        <ion-icon name="close" style="font-size:22px"></ion-icon>
+      </button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item style="text-align:center;margin-left: 10%">
+    <qrcode [qrdata]="data" [size]="256" [level]="'M'"></qrcode>
+  </ion-item>
+  <ion-item *ngFor="let key of values;let i=index;">
+    <ion-label>{{i+1}}. &nbsp;&nbsp; {{key}}</ion-label>
+  </ion-item>
+</ion-content>

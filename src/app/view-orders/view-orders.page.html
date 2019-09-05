@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="toolClass">
+    <ion-title style="color:white">View Orders
+      <button style="float:right;color: white;background-color: black" (click)="dismiss()">
+        <ion-icon name="close" style="font-size:22px"></ion-icon>
+      </button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table style="border:1px solid;font-size: 25px;width: 100%;text-align: center">
+    <tbody>
+      <tr style="border:1px solid" *ngFor="let data of orders;let i=index">
+        <td style="border:1px solid">
+          {{i+1}}.
+        </td>
+        <td> {{data}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</ion-content>
